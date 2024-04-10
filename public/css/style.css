@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.books{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 10px 5px;
+}
+
+
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+}
