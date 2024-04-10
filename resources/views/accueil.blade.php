@@ -20,7 +20,11 @@
                     <td>{{ $emprunt->livre->titre }}</td>
                     <td>{{ $emprunt->date_debut }}</td>
                     <td>{{ $emprunt->date_fin }}</td>
-                    <td><a class="btn btn-success" href="{{ route('restituer', [ 'id_emprunt' => $emprunt->id, 'id_livre' => $emprunt->livre->id ]) }}">Restituer</a></td>
+                    <td>
+                        @if (!$emprunt->date_fin)
+                            <a class="btn btn-success" href="{{ route('restituer', [ 'id_emprunt' => $emprunt->id, 'id_livre' => $emprunt->livre->id ]) }}">Restituer</a>
+                        @endif
+                    </td>
                 </tr>
             @endforeach
         </tbody>
