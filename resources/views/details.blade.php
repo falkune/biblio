@@ -14,10 +14,11 @@
                 <p class="card-text">{{ $livre->annee_de_sortie }}</p>
                 <p class="card-text">{{ $livre->auteur->prenom }}</p>
                 <div class="d-flex justify-content-between">
-                    <a href="{{ route('emprunter', ['id' => $livre->id]) }}" class="btn btn-primary">
-                        emprunter
-                    </a>
+
                     @auth
+                        <a href="{{ route('emprunter', ['id' => $livre->id]) }}" class="btn btn-primary">
+                            emprunter
+                        </a>
                         @if (Auth::user()->type == "admin")
                             <a href="/modifier" class="btn btn-primary">
                                 <i class="fa-solid fa-pen-to-square"></i>
