@@ -1,0 +1,14 @@
+###
+GET http://localhost:8000/api
+
+
+###
+POST  http://localhost:8000/api/inscription
+Content-Type: application/json
+
+{
+    "nom": "test",
+    "prenom": "test",
+    "email": "test1@mail.com",
+    "password": "passer"
+}
