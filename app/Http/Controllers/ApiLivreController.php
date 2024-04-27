@@ -39,4 +39,13 @@ class ApiLivreController extends Controller {
 
         return response()->json([ 'status' => 201, 'message' => 'created' ]);
     }
+
+    // methode pour retourner les info d'un livre
+    public function livreInfos($id){
+        $livre = Livre::find($id);
+        return response()->json([
+            'status' => 200,
+            'data'   => $livre
+        ]);
+    }
 }

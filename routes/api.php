@@ -12,3 +12,6 @@ Route::get('/', [ApiLivreController::class, 'tousLesLivres']);
 Route::post('/inscription', [ApiUserController::class, 'register']);
 // Route pour creer un livre
 Route::post('/ajout-livre', [ApiLivreController::class, 'store']);
+// Route pour afficher les infos d'un livre connaisant son id
+Route::get('/detais/{id}', [ApiLivreController::class, 'livreInfos']);
+// Route pour emprunter un livre
